@@ -1,0 +1,76 @@
+@font-face {
+    font-family: MonumentExtendedRegular;
+    src: url("../fonts/MonumentExtended-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: NeueMachinaUltrabold;
+  src: url("../fonts/NeueMachina-Ultrabold.otf") format("opentype");
+}
+body {
+  background-image: url("../images/LOOPS(red).png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+p1{
+  font-family: MonumentExtendedRegular;
+  font-size: 3.5vh;
+  color: #737373;
+  z-index:0;
+}
+a{
+  font-family: NeueMachinaUltrabold;
+  font-size: 6vh;
+  color: #00e600;
+  text-decoration: none;
+  z-index:1;
+}
+.topLeft{
+  position: fixed;
+  width: 30px;
+  top: 29vh;
+  left:4vh;
+}
+.topRight{
+  position: fixed;
+  width: 15px;
+  top: 2vh;
+  right:6vh;
+}
+.bottomRight{
+  position: fixed;
+  width: 30px;
+  bottom: 28vh;
+  right:6vh;
+}
+.bottomLeft{
+  position: absolute;
+  width: 30px;
+  bottom: 2vh;
+  left:5vh;
+}
+.centre{
+  margin: auto;
+  text-align: left;
+}
+
+@keyframes flickerAnimation {
+  0%   { text-decoration:line-through; }
+  50%  { text-decoration:none; }
+  100% { text-decoration:line-through; }
+}
+.animate-flicker {
+    animation: flickerAnimation .1s infinite;
+}
+.footer {
+  position: fixed;
+  font-family: NeueMachinaUltrabold;
+  font-size: 8vh;
+  color: #8c8c8c;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color:white;
+  z-index:0;
+}
