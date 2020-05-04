@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Ping</title>
+  <link rel='stylesheet' href="styles/stylesheet.css">
   <style>
   html, body {
     height: 100%;
@@ -9,7 +10,7 @@
   }
 
   body {
-    background: black;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +18,7 @@
   </style>
 </head>
 <body>
+<p1 class="topLeft">Score at least 15</p1>
 <canvas width="750" height="585" id="game"></canvas>
 <script>
 const canvas = document.getElementById('game');
@@ -31,7 +33,7 @@ var count = 0;
 
 const leftPaddle = {
   // start in the middle of the game on the left side
-  x: grid * 2,
+  x: 0,
   y: 0,
   width: grid,
   height: canvas.height,
@@ -98,7 +100,7 @@ function loop() {
   }
 
   // draw paddles
-  context.fillStyle = 'white';
+  context.fillStyle = 'darkgrey';
   context.fillRect(leftPaddle.x, leftPaddle.y, leftPaddle.width, leftPaddle.height);
   context.fillRect(rightPaddle.x, rightPaddle.y, rightPaddle.width, rightPaddle.height);
 
@@ -120,7 +122,7 @@ function loop() {
   if ( (ball.x < 0 || ball.x > canvas.width) && !ball.resetting) {
     ball.resetting = true;
     //put assets here for functions
-    if (count == 2){
+    if (count >= 15){
       window.location.href = "index.html"
     }
     else {count = 0;}
@@ -153,7 +155,6 @@ function loop() {
 
   context.font = "30px Arial";
   context.fillText(count, 50, 50);
-  context.fillText("score 15... or more", 50, 560);
 
 
 
@@ -161,7 +162,7 @@ function loop() {
   context.fillRect(ball.x, ball.y, ball.width, ball.height);
 
   // draw walls
-  context.fillStyle = 'lightgrey';
+  context.fillStyle = 'darkgrey';
   context.fillRect(0, 0, canvas.width, grid);
   context.fillRect(0, canvas.height - grid, canvas.width, canvas.height);
 
