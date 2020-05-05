@@ -18,7 +18,7 @@
   </style>
 </head>
 <body>
-<p1 class="topLeft">Score at least 15</p1>
+<p1 class="topLeft">Score at least 10</p1>
 <canvas width="750" height="585" id="game"></canvas>
 <script>
 const canvas = document.getElementById('game');
@@ -28,7 +28,7 @@ const paddleHeight = grid * 5; // 80
 const maxPaddleY = canvas.height - grid - paddleHeight;
 
 var paddleSpeed = 6;
-var ballSpeed = 5;
+var ballSpeed = 3;
 var count = 0;
 
 const leftPaddle = {
@@ -122,7 +122,8 @@ function loop() {
   if ( (ball.x < 0 || ball.x > canvas.width) && !ball.resetting) {
     ball.resetting = true;
     //put assets here for functions
-    if (count >= 15){
+    if (count >= 10){
+      pageNumComplete(2);
       window.location.href = "index.html"
     }
     else {count = 0;}
@@ -195,5 +196,6 @@ document.addEventListener('keyup', function(e) {
 // start the game
 requestAnimationFrame(loop);
 </script>
+<script src="cookies.js"></script>
 </body>
 </html>

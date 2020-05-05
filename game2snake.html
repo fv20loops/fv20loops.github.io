@@ -61,7 +61,7 @@ function loop() {
   requestAnimationFrame(loop);
 
   // slow game loop to 15 fps instead of 60 (60/15 = 4)
-  if (++count < 4) {
+  if (++count < 10) {
     return;
   }
 
@@ -130,7 +130,10 @@ function loop() {
         snake.maxCells = 4;
         snake.dx = grid;
         snake.dy = 0;
-        if(appleEatCounter >= 15) {window.location.href = "index.html"}
+        if(appleEatCounter >= 15) {
+          window.location.href = "index.html"
+          pageNumComplete(3)
+        }
         else{appleEatCounter = 0};
 
         apple.x = getRandomInt(0, 25) * grid;
@@ -172,5 +175,6 @@ document.addEventListener('keydown', function(e) {
 // start the game
 requestAnimationFrame(loop);
 </script>
+<script src="cookies.js"></script>
 </body>
 </html>

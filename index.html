@@ -13,17 +13,20 @@
         <!-- Google Font -->
         <link rel='stylesheet' href="styles/stylesheet.css">
     </head>
-    <body>
+    <body onload="tally()">
       <div>
-        <a href="about.html" class="topLeft animate-flicker" style="transform: rotate(-90deg);">ABOUT</a>
-        <a class="bottomRight animate-flicker" style="transform: rotate(90deg);">CONTACT</a>
+        <a onclick="pageNumComplete(0)" href="about.html" class="topLeft animate-flicker" style="transform: rotate(-90deg);">ABOUT</a>
+        <a id="basket" href="basket.html" class="topRight animate-flicker" style="right: 25vh">BASKET</a>
+        <a onclick="pageNumComplete(1)" href="contact.html" class="bottomRight animate-flicker" style="transform: rotate(90deg);">CONTACT</a>
       </div>
       <div style="position: absolute; margin: auto; width: auto; height: auto; top: 30%; right: 30%">
         <a href="game1pong.html">GAME1</a><br>
         <a href="game2snake.html">GAME2</a><br>
         <a href="game3tetris.html">GAME3</a><br></div>
+        <a onClick="reset()">reset</a><br>
       <div class="footer">
           <div><a class="bottomLeft animate-flicker" style="font-size: 4vh">FugitiveVoices@RCA</a><span style="font-size: 2vh;">Fugitive Voices 2019-2020</span></div>
       </div>
     </body>
+    <script src="cookies.js"></script>
 </html>
