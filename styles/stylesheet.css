@@ -14,8 +14,15 @@ body {
 }
 p1{
   font-family: MonumentExtendedRegular;
-  font-size: 3.5vh;
+  font-size: 3.25vh;
   color: #737373;
+  z-index:0;
+}
+p2{
+  position:fixed;
+  font-family: NeueMachinaUltrabold;
+  font-size: 2.7vh;
+  color: black;
   z-index:0;
 }
 a{
@@ -54,6 +61,30 @@ a{
   text-align: left;
 }
 
+.contactsDiv{
+  position: fixed;
+  top: 32%;
+}
+
+.contactsBodyRow1{
+  position: fixed;
+  top: 31%;
+  right: 41%;
+  font-family: NeueMachinaUltrabold;
+  font-size: 17px;
+  color: black;
+  width: 200px;
+}
+
+.contactsBodyRow2{
+  position: fixed;
+  top: 31%;
+  right: 11%;
+  font-family: NeueMachinaUltrabold;
+  font-size: 17px;
+  color: black;
+  width: 200px;
+}
 @keyframes flickerAnimation {
   0%   { text-decoration:line-through; }
   50%  { text-decoration:none; }
