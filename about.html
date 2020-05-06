@@ -13,13 +13,30 @@
         <!-- Google Font -->
         <link rel='stylesheet' href="styles/stylesheet.css">
     </head>
-    <body>
+    <body  onload="tally()">
+      <div id="logoRow" class="logoRow">
+        <div class="logoColumn">
+          <img src="images/loopsLogo/LoopsL.png" alt="Logo L">
+        </div>
+        <div class="logoColumn">
+            <img src="images/loopsLogo/LoopsO.png" alt="Logo 0">
+        </div>
+        <div id="logoBefore" class="logoColumn">
+            <img src="images/loopsLogo/LoopsO.png" alt="Logo 0">
+        </div>
+        <div class="logoColumn">
+          <img src="images/loopsLogo/LoopsP.png" alt="Logo P">
+        </div>
+        <div class="logoColumn">
+          <img src="images/loopsLogo/LoopsS.png" alt="Logo S">
+        </div>
+    </div>
       <div>
-        <a class="topLeft" style="transform: rotate(-90deg); text-decoration:line-through;">ABOUT</a>
-        <a href="index.html" class="topRight">x</a>
+        <a class="topLeft" style="transform: rotate(-90deg);">ABOUT</a>
+        <a href="index.html" class="topRightX">x</a>
         <a href="contact.html" class="bottomRight animate-flicker" style="transform: rotate(90deg);">CONTACT</a>
       </div>
-        <div class="centre" style="margin-top:30vh; margin-bottom:20vh; width: 80%">
+        <div class="centre" style="position: absolute; margin-top:30vh; margin-bottom:20vh; width: 80%">
           <p1>You-re staring at pixels. Infinite sequences built for purpose. If you were to stare into the world of your own looping mechanisms, are you in control of your repetitions, or do they manage you themselves? Think of this as a crossroads. You-re staring at a loop and it-s inviting you to analyse its every turn. Every intricate bend and small question. Every opportunity - taken or missed - regretted or applauded. This is a game of chance. Collect 11 and win is our suggestion, but to look deeper is the challenge we set for you. To look into every corner as an opportunity of questioning yourself and differentiating between self-inflicted and welcomed loops that exist within the air of your existence.
 Enter the void. Enter the game. Enter the loop.</p1>
         </div>
@@ -27,4 +44,5 @@ Enter the void. Enter the game. Enter the loop.</p1>
           <div><a class="bottomLeft animate-flicker" style="font-size: 4vh">FugitiveVoices@RCA</a><span style="font-size: 2vh;">Fugitive Voices 2019-2020</span></div>
         </div>
     </body>
+    <script src="cookies.js"></script>
 </html>

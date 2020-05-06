@@ -21,7 +21,7 @@
   </style>
 </head>
 <body>
-<p1 class="topLeft">Score at least 15</p1>
+<p1 class="topLeft">Score at least 5</p1>
 <canvas width="400" height="400" id="game"></canvas>
 <script>
 var canvas = document.getElementById('game');
@@ -61,7 +61,7 @@ function loop() {
   requestAnimationFrame(loop);
 
   // slow game loop to 15 fps instead of 60 (60/15 = 4)
-  if (++count < 10) {
+  if (++count < 4) {
     return;
   }
 
@@ -130,11 +130,11 @@ function loop() {
         snake.maxCells = 4;
         snake.dx = grid;
         snake.dy = 0;
-        if(appleEatCounter >= 15) {
-          window.location.href = "index.html"
-          pageNumComplete(3)
+        if(appleEatCounter >= 5) {
+          gameWin();
         }
-        else{appleEatCounter = 0};
+        else{appleEatCounter = 0
+        window.location.href = "index.html"};
 
         apple.x = getRandomInt(0, 25) * grid;
         apple.y = getRandomInt(0, 25) * grid;

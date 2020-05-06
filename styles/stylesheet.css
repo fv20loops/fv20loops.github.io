@@ -40,9 +40,13 @@ a{
 }
 .topRight{
   position: fixed;
-  width: 15px;
+  top: 10vh;
+  right:40vw;
+}
+.topRightX{
+  position: fixed;
   top: 2vh;
-  right:6vh;
+  right: 1.5vw;
 }
 .bottomRight{
   position: fixed;
@@ -59,6 +63,7 @@ a{
 .centre{
   margin: auto;
   text-align: left;
+  left: 10%
 }
 
 .contactsDiv{
@@ -67,7 +72,7 @@ a{
 }
 
 .contactsBodyRow1{
-  position: fixed;
+  position:absolute;
   top: 31%;
   right: 41%;
   font-family: NeueMachinaUltrabold;
@@ -77,7 +82,7 @@ a{
 }
 
 .contactsBodyRow2{
-  position: fixed;
+  position:absolute;
   top: 31%;
   right: 11%;
   font-family: NeueMachinaUltrabold;
@@ -85,6 +90,45 @@ a{
   color: black;
   width: 200px;
 }
+
+.logoRowHome {
+  position: fixed;
+  top: 30vh;
+  left: 7%;
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
+}
+
+.logoColumnHome {
+  float: left;
+}
+
+.logoColumnHome img {
+  height: 30px;
+  width: auto;
+}
+
+.logoRow {
+  position: fixed;
+  top: 14vh;
+  left: 47%;
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
+}
+
+.logoColumn {
+  float: left;
+}
+
+.logoColumn img {
+  height: 20px;
+  width: auto;
+}
+
 @keyframes flickerAnimation {
   0%   { text-decoration:line-through; }
   50%  { text-decoration:none; }
@@ -104,4 +148,26 @@ a{
   text-align: center;
   background-color:white;
   z-index:0;
+}
+
+.contactGrid {
+  position:absolute;
+  left: 13vw;
+  top: 27vh;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-gap: 0px;
+  grid-align: right;
+  background-color: white;
+  padding: 0px;
+}
+
+.contactGrid > div {
+  border: 1px solid #00e600;
+  text-align: right;
+  padding:2px;
+  font-family: NeueMachinaUltrabold;
+  color: #00e600;
+  font-size: 15px;
 }

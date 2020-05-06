@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>a fake game</h1>
+
+<p>Click abutton to trigger a win or lose function.</p>
+
+<button onclick="gameWin()">Win</button>
+<button onclick="gameLose()">Loser</button>
+<script>
+
+function gameWin() {
+  console.log("win");
+  var x = 0;
+  var y = 0;
+  var arr = [];
+  var chooser = 0;
+  for(i=0; i<11; i++) {
+    x = parseInt(localStorage.getItem("page"+i));
+    if (isNaN(x)) {x=0};
+    if (x==0) {
+      console.log("page"+i+" "+x);
+      arr.push(i);
+      console.log(arr);
+    };
+  }
+  console.log("array length: "+arr.length);
+  chooser = Math.round(Math.random() * (arr.length));
+  console.log("the index of the array...:"+chooser);
+  console.log("page am going to is... "+arr[chooser]);
+  window.location.href='projects/project'+arr[chooser]+'.html';
+}
+
+function gameLose() {
+    console.log("lose");
+}
+</script>
+
+</body>
+<script src="cookies.js"></script>
+</html>
+
+<!-- //if you win a game, it should lead you to a project page you havent been to
+//read through flags,
+//select page of first flag that is 0 -->

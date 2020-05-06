@@ -13,14 +13,31 @@
   <!-- Google Font -->
   <link rel='stylesheet' href="styles/stylesheet.css">
 </head>
-<body>
-  <div>
-    <a href="about.html" class="topLeft  animate-flicker" style="transform: rotate(-90deg);">ABOUT</a>
-    <a href="index.html" class="topRight">x</a>
-    <a class="bottomRight" style="transform: rotate(90deg); text-decoration:line-through;">CONTACT</a>
+<body  onload="tally()">
+  <div id="logoRow" class="logoRow">
+    <div class="logoColumn">
+      <img src="images/loopsLogo/LoopsL.png" alt="Logo L">
+    </div>
+    <div class="logoColumn">
+        <img src="images/loopsLogo/LoopsO.png" alt="Logo 0">
+    </div>
+    <div id="logoBefore" class="logoColumn">
+        <img src="images/loopsLogo/LoopsO.png" alt="Logo 0">
+    </div>
+    <div class="logoColumn">
+      <img src="images/loopsLogo/LoopsP.png" alt="Logo P">
+    </div>
+    <div class="logoColumn">
+      <img src="images/loopsLogo/LoopsS.png" alt="Logo S">
+    </div>
   </div>
   <div>
-    <p2 style = "top: 50%; left:-90px; transform: rotate(-90deg);">Fugitive Voices 2019-2020
+    <a href="about.html" class="topLeft  animate-flicker" style="transform: rotate(-90deg);">ABOUT</a>
+    <a href="index.html" class="topRightX">x</a>
+    <a class="bottomRight" style="transform: rotate(90deg);">CONTACT</a>
+  </div>
+  <div>
+    <p2 style = "font-size: 20px; top: 50%; left:-70px; transform: rotate(-90deg);">Fugitive Voices 2019-2020
     <br><span  onclick="window.location.href='https://www.instagram.com/fugitive_voices/';">INSTAGRAM @fugitive_voices</span></p2>
   </div>
   <div class="contactsBodyRow1">
@@ -35,8 +52,22 @@
     <div>CAN YANG <br>VISUAL COMMUNICATION <br>+44 7774 0952 732 <br>CAN.YANG@NETWORK.RCA.AC.UK</div><br><br>
     <div>CAN YANG <br>VISUAL COMMUNICATION <br>+44 7774 0952 732 <br>CAN.YANG@NETWORK.RCA.AC.UK</div><br><br>
   </div>
+  <div class="contactGrid">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+  </div>
   <div class="footer">
     <div><a class="bottomLeft animate-flicker" style="font-size: 4vh">FugitiveVoices@RCA</a><span style="font-size: 2vh;">Fugitive Voices 2019-2020</span></div>
   </div>
 </body>
+<script src="cookies.js"></script>
 </html>
