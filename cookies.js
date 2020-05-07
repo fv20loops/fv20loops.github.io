@@ -158,7 +158,7 @@ function gameWin() {
   chooser = Math.round(Math.random() * (arr.length-1));
   console.log("the index of the array...:"+chooser);
   console.log("page am going to is... "+arr[chooser]);
-  // setTimeout(function(){window.location.href='projects/project'+arr[chooser]+'.html';}, 1000);
+  setTimeout(function(){window.location.href='projects/project'+arr[chooser]+'.html';}, 1000);
 
   }
 }
