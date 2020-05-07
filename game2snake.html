@@ -110,7 +110,6 @@ function loop() {
     context.fillRect(cell.x, cell.y, grid-1, grid-1);
 
     // snake ate apple
-    //assets in here!
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
       appleEatCounter++;
@@ -133,7 +132,8 @@ function loop() {
         if(appleEatCounter >= 5) {
           gameWin();
         }
-        else{appleEatCounter = 0
+        else{
+          gameLose();
         window.location.href = "index.html"};
 
         apple.x = getRandomInt(0, 25) * grid;

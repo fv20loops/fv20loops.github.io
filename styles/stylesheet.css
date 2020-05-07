@@ -12,6 +12,7 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+
 p1{
   font-family: MonumentExtendedRegular;
   font-size: 3.25vh;
@@ -27,7 +28,7 @@ p2{
 }
 a{
   font-family: NeueMachinaUltrabold;
-  font-size: 6vh;
+  font-size: 4vh;
   color: #00e600;
   text-decoration: none;
   z-index:1;
