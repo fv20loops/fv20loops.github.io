@@ -13,7 +13,7 @@
         <!-- Google Font -->
         <link rel='stylesheet' href="styles/stylesheet.css">
     </head>
-    <body id="bodybody" onload="tallyHome(); modTally(); resetAlert();">
+    <body id="bodybody" onload=" resetAlert(); tallyHome(); modTally();">
         <div id="logoRow" class="logoRowHome">
           <div class="logoColumnHome">
             <img src="images/loopsLogo/LoopsL.png" alt="Logo L">
@@ -32,32 +32,33 @@
           </div>
           <br><br><br><br><br>
           <div>
-            <p2 style="font-size: 15px; color:#737373; width: 40%">Visit all project pages to collect the green Os and win</p2>
+            <p2 id="strapline1" style="font-size: 15px; color:#737373; width: 40%">Visit all project pages to collect the green Os and win</p2>
           </div>
       </div>
       <div>
-        <a onclick="pageNumComplete(0)" href="about.html" class="topLeft animate-flicker" style="transform: rotate(-90deg);">ABOUT</a>
-        <a id="basket" href="basket.html" class="topRight animate-flicker" style="right: 25vh">BASKET</a>
-        <a onclick="pageNumComplete(1)" href="contact.html" class="bottomRight animate-flicker" style="transform: rotate(90deg);">CONTACT</a>
+        <a id="about" onclick="pageNumComplete(0)" href="about.html" class="topLeft animate-flicker" style="transform: rotate(-90deg);">ABOUT</a>
+        <a id="basket" href="basket.html" class="topRight animate-flicker" style="right: 25vh">0</a>
+        <a id="contact" onclick="pageNumComplete(1)" href="contact.html" class="bottomRight animate-flicker" style="transform: rotate(90deg);">CONTACT</a>
       </div>
       <div style="position: absolute; margin: auto; width: auto; height: auto; top: 30%; right: 30%">
-        <a href="game1pong.html">GAME1</a><br>
-        <a href="game2snake.html">GAME2</a><br>
-        <a href="game3tetris.html">GAME3</a><br>
-        <a href="fakeGame.html">FakeGame</a><br>
-        <a id="project0" href="projects/project1.html">project1</a><br>
-        <a id="project1" href="projects/project2.html">project2</a><br>
-        <a id="project2" href="projects/project3.html">project3</a><br>
-        <a id="project3" href="projects/project4.html">project4</a><br>
-        <a id="project4" href="projects/project5.html">project5</a><br>
-        <a id="project5" href="projects/project6.html">project6</a><br>
-        <a id="project6" href="projects/project7.html">project7</a><br>
-        <a id="project7" href="projects/project8.html">project8</a><br>
-        <a id="project8" href="projects/project9.html">project9</a><br>
-        <a id="project9" href="projects/project10.html">project10</a><br>
-        <a id="mod1" href="mods/modpage1.html">modPage1</a><br>
-        <a id="mod2" href="mods/modpage2.html">modPage2</a><br>
-        <a id="mod3" href="mods/modpage3.html">modPage3</a><br>
+        <div style="position:relative; left: 100px"><a id="game1" href="game1pong.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; right: 200px; top: -50px"><a id="game2" href="game2snake.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; right: 100px; top: 20px"><a id="game3" href="game3tetris.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; right: 150px; top: 30px"><a id="game4" href="fakeGame.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; left: 100px; top: -30px"><a href="projects/project0.html"><img id="project0" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; right: 10px; top: 10px"><a href="projects/project1.html"><img id="project1" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; right: 80px; top: 20px"><a href="projects/project2.html"><img id="project2" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; left: 200px; top: -60px"><a href="projects/project3.html"><img id="project3" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; left: 250px; top: 0px"><a href="projects/project4.html"><img id="project4" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; right: 120px; top: 10px"><a href="projects/project5.html"><img id="project5" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; right: 220px; top: 0px"><a href="projects/project6.html"><img id="project6" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; right: 140px; top: -40px"><a href="projects/project7.html"><img id="project7" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; left: 290px; top: -100px"><a href="projects/project8.html"><img id="project8" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; right: 104px; top: -40px"><a href="projects/project9.html"><img id="project9" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; left: 260px; top: 20px"><a href="projects/project10.html"><img id="project10" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; left: 190px; top: -150px"><a href="mods/modpage1.html"><img id="mod1" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; right: 123px; top: -30px"><a href="mods/modpage2.html"><img id="mod2" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:relative; left: 210px; top: -100px"><a href="mods/modpage3.html"><img id="mod3" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
       </div>
         <a style="font-size: 3vh" onClick="reset()">restart, loose all progress..</a><br>
       <div class="footer">

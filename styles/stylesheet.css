@@ -75,21 +75,21 @@ a{
 .contactsBodyRow1{
   position:absolute;
   top: 31%;
-  right: 41%;
+  right: 31%;
   font-family: NeueMachinaUltrabold;
-  font-size: 17px;
+  font-size: 18px;
   color: black;
-  width: 200px;
+  width: 300px;
 }
 
 .contactsBodyRow2{
   position:absolute;
   top: 31%;
-  right: 11%;
+  right: 5%;
   font-family: NeueMachinaUltrabold;
-  font-size: 17px;
+  font-size: 18px;
   color: black;
-  width: 200px;
+  width: 300px;
 }
 
 .logoRowHome {

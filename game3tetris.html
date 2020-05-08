@@ -23,12 +23,15 @@
 </head>
 <body>
 <canvas width="320" height="640" id="game"></canvas>
+<div style="text-align: left;">
+<p1 style="font-size:20px; position: relative; left:0px">"TETRIS"<br><br>Clear at least <br>3 rows to win.<br><br> up arrow to rotate<br>down arrow to speed up<br>left and right arrow move</p1>
+</div>
 <script>
 // https://tetris.fandom.com/wiki/Tetris_Guideline
 
 // get a random integer between the range of [min,max]
 // @see https://stackoverflow.com/a/1527820/2124254
-
+var gameCount = 0;
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -153,6 +156,11 @@ function showGameOver() {
   context.textAlign = 'center';
   context.textBaseline = 'middle';
   context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
+  if (gameCount >= 3) {
+    gameWin();
+  } else {
+    gameLose();
+  }
 }
 
 const canvas = document.getElementById('game');
@@ -162,9 +170,7 @@ const tetrominoSequence = [];
 // keep track of what is in every cell of the game using a 2d array
 // tetris playfield is 10x20, with a few rows offscreen
 const playfield = [];
-var gameCount = 0;
-context.font = "30px Arial";
-context.fillText(gameCount, canvas.width / 2, canvas.height / 2);
+
 
 // populate the empty state
 for (let row = -2; row < 20; row++) {
@@ -217,8 +223,8 @@ const tetrominos = {
 
 // color of each tetromino
 const colors = {
-  'I': 'cyan',
-  'O': 'yellow',
+  'I': 'pink',
+  'O': 'grey',
   'T': 'purple',
   'S': 'green',
   'Z': 'red',
@@ -235,6 +241,8 @@ let gameOver = false;
 function loop() {
   rAF = requestAnimationFrame(loop);
   context.clearRect(0,0,canvas.width,canvas.height);
+  context.font = "30px Arial";
+  context.fillText(gameCount, 10, 30);
 
   // draw the playfield
   for (let row = 0; row < 20; row++) {
@@ -319,5 +327,9 @@ document.addEventListener('keydown', function(e) {
 // start the game
 rAF = requestAnimationFrame(loop);
 </script>
+<div class="footer">
+  <div><a class="bottomLeft animate-flicker" style="font-size: 4vh">FugitiveVoices@RCA</a><span style="font-size: 2vh;">Fugitive Voices 2019-2020</span></div>
+</div>
+<script src="cookies.js"></script>
 </body>
 </html>
