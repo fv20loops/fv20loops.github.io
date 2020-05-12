@@ -18,13 +18,21 @@
 
   canvas {
     border: 1px solid black;
+    margin-left: 2px;
+    margin-right: 0px;
   }
   </style>
 </head>
 <body>
 <canvas width="320" height="640" id="game"></canvas>
 <div style="text-align: left;">
-<p1 style="font-size:20px; position: relative; left:0px">"TETRIS"<br><br>Clear at least <br>3 rows to win.<br><br> up arrow to rotate<br>down arrow to speed up<br>left and right arrow move</p1>
+<p1 style="font-size:20px; position: relative; left:0px">"TETRIS"<br><br>Welcome to 1984<br>put your smartphone away<br><br>
+Use the up arrow on your keyboard<br> to rotate the pieces<br>
+and move with the left and right arrows<br>
+to create solid lines in the grid<br>
+Clear 3 immaculate lines to win<br>
+</p1><br>
+<p1 id="instrucText1" style="font-size:20px; position: relative; left:0px"></p1>
 </div>
 <script>
 // https://tetris.fandom.com/wiki/Tetris_Guideline
@@ -156,11 +164,8 @@ function showGameOver() {
   context.textAlign = 'center';
   context.textBaseline = 'middle';
   context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
-  if (gameCount >= 3) {
-    gameWin();
-  } else {
-    gameLose();
-  }
+
+
 }
 
 const canvas = document.getElementById('game');
@@ -284,6 +289,7 @@ function loop() {
       }
     }
   }
+
 }
 
 // listen to keyboard events to move the active tetromino
@@ -322,6 +328,16 @@ document.addEventListener('keydown', function(e) {
 
     tetromino.row = row;
   }
+
+  if (gameCount >= 3) {
+        document.getElementById("instrucText1").innerHTML = ""
+        var href = document.createElement("a");
+        href.onclick = function () {gameWin()};
+        href.style = "font-size: 20px";
+        href.innerHTML = "Smashed it!<br>Click here to <br>progress to an artwork<br> or keep playing <br>and progress later";
+        var src = document.getElementById("instrucText1");
+        src.appendChild(href);
+      };
 });
 
 // start the game

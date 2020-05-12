@@ -13,7 +13,7 @@
         <!-- Google Font -->
         <link rel='stylesheet' href="styles/stylesheet.css">
     </head>
-    <body id="bodybody" onload=" resetAlert(); tallyHome(); modTally();">
+    <body id="bodybody" onload="tallyHome(); modTally();">
         <div id="logoRow" class="logoRowHome">
           <div class="logoColumnHome">
             <img src="images/loopsLogo/LoopsL.png" alt="Logo L">
@@ -32,14 +32,26 @@
           </div>
           <br><br><br><br><br>
           <div>
-            <p2 id="strapline1" style="font-size: 15px; color:#737373; width: 40%">Visit all project pages to collect the green Os and win</p2>
+            <p2 id="strapline1" style="font-size: 18px; color:#737373; width: 40%">Enter the L0o0op by selecting your first entry point node<br><br>
+              Your goal is to access all 11 of the artworks and along the way you will face glitches and games, both of which you must overcome to complete the journey<br><br>
+              Toolkit<br>
+              - Games boost you to an artwork<br>
+              - Glitches must be removed by returning to the L0o0op and winning a game<br>
+              - The number is your points tally<br>
+              - The L0o0op is best explored through a device with a keyboard<br>
+              <br>
+              G0o0oD LUCK - don’t get lost along the way
+</p2>
+            <br><br>
+            <p2 id="winnerStrap" style="top: 35%; font-size: 14px;"></p2>
           </div>
       </div>
       <div>
-        <a id="about" href="about.html" class="topLeft animate-flicker" style="transform: rotate(-90deg);">ABOUT</a>
-        <a id="basket" href="basket.html" class="topRight animate-flicker" style="right: 25vh">0</a>
+        <a id="about" href="about.html" class="topLeft animate-flicker" style="transform: rotate(-90deg); cursor:help">ABOUT</a>
+        <!-- <a id="basket" href="basket.html" class="topRight animate-flicker" style="right: 25vh">0</a> -->
         <a id="contact" href="contact.html" class="bottomRight animate-flicker" style="transform: rotate(90deg);">CONTACT</a>
       </div>
+      <img src="./images/homepage_graphic.png" style="height:850px; position: absolute; right:0px; top: 30%; padding-bottom: 50px">
       <div style="position: absolute; margin: auto; width: auto; height: auto; top: 30%; right: 30%">
         <div style="position:relative; left: 100px"><a id="game1" href="game1pong.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
         <div style="position:relative; right: 200px; top: -50px"><a id="game2" href="game2snake.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
@@ -60,8 +72,8 @@
         <div style="position:relative; right: 123px; top: -30px"><a href="mods/modpage2.html"><img id="mod2" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
         <div style="position:relative; left: 210px; top: -100px"><a href="mods/modpage3.html"><img id="mod3" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
       </div>
-        <a style="font-size: 3vh" onClick="reset()">restart, loose all progress..</a><br>
-      <div class="footer">
+        <!-- <a style="font-size: 3vh" onClick="reset()">restart, loose all progress..</a><br> -->
+      <div id="footer" class="footer">
           <div><a class="bottomLeft animate-flicker" style="font-size: 4vh">FugitiveVoices@RCA</a><span style="font-size: 2vh;">Fugitive Voices 2019-2020</span></div>
       </div>
     </body>

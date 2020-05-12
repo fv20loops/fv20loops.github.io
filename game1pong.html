@@ -15,11 +15,21 @@
     align-items: center;
     justify-content: center;
   }
+
+  canvas{
+    margin-left: 0px;
+    margin-right: auto;
+  }
   </style>
 </head>
 <body>
-<div style="text-align: right;">
-<p1 style="font-size:20px; position: relative; left:0px">"PING"<br><br>Score at least <br>5 to win.<br><br> up & down<br>arrows to<br>move</p1>
+<div style="text-align: left;">
+<p1 style="font-size: 15px"><span style="font-size: 20px">"PONG"</span><br><br>
+Welcome to 1972<br> put your smartphone away<br><br>
+Use the arrows on your keyboard<br>to move the bat towards the ball<br>
+Clear 5 returns like a Williams to win<br>
+
+  <p1 id = "instrucText1"></p1>
 </div>
 <canvas width="750" height="585" id="game"></canvas>
 <script>
@@ -124,19 +134,12 @@
     // reset ball if it goes past paddle (but only if we haven't already done so)
     if ( (ball.x < 0 || ball.x > canvas.width) && !ball.resetting) {
       ball.resetting = true;
-      //put assets here for functions
-      if (count >= 5){
-        gameWin();
-      }
-      else {
-        gameLose();
-        window.location.href = "index.html"}
-
       // give some time for the player to recover before launching the ball again
       setTimeout(() => {
         ball.resetting = false;
         ball.x = canvas.width / 2;
         ball.y = canvas.height / 2;
+        count = 0;
       }, 400);
     }
 
@@ -155,6 +158,15 @@
       // in the next frame
       ball.x = rightPaddle.x - ball.width;
       count++;
+      if(count >= 5){
+        document.getElementById("instrucText1").innerHTML = ""
+        var href = document.createElement("a");
+        href.onclick = function () {gameWin()};
+        href.style = "font-size: 20px";
+        href.innerHTML = "Smashed it!<br>Click here to <br>progress to an artwork<br> or keep playing <br>and progress later";
+        var src = document.getElementById("instrucText1");
+        src.appendChild(href);
+      }
 
     }
 

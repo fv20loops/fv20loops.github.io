@@ -17,11 +17,20 @@
   }
   canvas {
     border: 1px solid black;
+    margin-left: 2px;
+    margin-right: 0px;
   }
   </style>
 </head>
 <body>
-<p1 class="topLeft">Score at least 5</p1>
+  <div style="text-align: left;">
+  <p1 style="font-size: 15px"><span style="font-size: 20px">"SNAKE"</span><br><br>Welcome to 1997<br>put your smartphone away<br><br>
+Use the arrows on your keyboard<br>
+to direct your snake to its food<br>
+Collect 5 delicious treats to win
+</p1><br>
+    <p1 id = "instrucText1"></p1>
+  </div>
 <canvas width="400" height="400" id="game"></canvas>
 <script>
 var canvas = document.getElementById('game');
@@ -113,6 +122,15 @@ function loop() {
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
       appleEatCounter++;
+      if(appleEatCounter >= 5){
+        document.getElementById("instrucText1").innerHTML = "";
+        var href = document.createElement("a");
+        href.onclick = function () {gameWin()};
+        href.style = "font-size: 20px";
+        href.innerHTML = "Smashed it!<br>Click here to <br>progress to an artwork<br> or keep playing <br>and progress later";
+        var src = document.getElementById("instrucText1");
+        src.appendChild(href);
+      }
       // canvas is 400x400 which is 25x25 grids
       apple.x = getRandomInt(0, 25) * grid;
       apple.y = getRandomInt(0, 25) * grid;
@@ -129,15 +147,9 @@ function loop() {
         snake.maxCells = 4;
         snake.dx = grid;
         snake.dy = 0;
-        if(appleEatCounter >= 5) {
-          gameWin();
-        }
-        else{
-          gameLose();
-        window.location.href = "index.html"};
-
         apple.x = getRandomInt(0, 25) * grid;
         apple.y = getRandomInt(0, 25) * grid;
+        appleEatCounter = 0;
       }
     }
   });
