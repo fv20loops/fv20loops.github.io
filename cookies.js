@@ -2,53 +2,6 @@
 //project pages are pages 0-10
 //mod pages are 11-14
 
-// function timer() {
-//   var x = parseInt(localStorage.getItem("timer"));
-//   if (isNaN(x)) {
-//     localStorage.setItem("timer", Date.now());
-//   };
-//   var y = Date.now();
-//   if (y >= x+3000) {
-//     console.log("its been 24 hours");
-//     localStorage.clear();
-//     location.reload();
-//   } else(console.log("it hasnt been 24 hours"))
-//
-// }
-
-
-function iframeLoaded() {
-      var iFrameID = document.getElementById('idIframe');
-      if(iFrameID) {
-            // here you can make the height, I delete it first, then I make it again
-            iFrameID.height = "";
-            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-      }
-  }
-
-
-
-
-
-
-
-
-function resetAlert(){
-  var x = sessionStorage.getItem('timer');
-  console.log(x);
-  if (x==null) {x=0};
-  if (x==0) {
-    console.log("its 0 now");
-    if(confirm("restart?")==true){
-      localStorage.clear();
-      sessionStorage.setItem('reset', 1);
-      console.log(sessionStorage.getItem('reset'));
-    } else {
-      sessionStorage.setItem('reset', 1);
-      console.log(sessionStorage.getItem('reset'));
-    }
-  };
-}
 
 function tallyHome() {
   var x = 0;
@@ -61,7 +14,6 @@ function tallyHome() {
     y = y +x;
     console.log("pageTotal "+y);
   };
-  // document.getElementById("basket").innerHTML = y;
 
   for (i=0; i<y; i++) {
     var newDiv = document.createElement("div");
@@ -128,7 +80,6 @@ function tallyHome() {
       document.getElementById("project7").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
       document.getElementById("project8").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
       document.getElementById("project9").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
-      document.getElementById("project10").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
       document.getElementById("mod1").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
       document.getElementById("mod2").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
       document.getElementById("mod3").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
@@ -154,7 +105,6 @@ function tallyHome() {
       document.getElementById("project7").style.filter = "blur(3px)";
       document.getElementById("project8").style.filter = "blur(3px)";
       document.getElementById("project9").style.filter = "blur(3px)";
-      document.getElementById("project10").style.filter = "blur(3px)";
       document.getElementById("mod1").style.filter = "blur(3px)";
       document.getElementById("mod2").style.filter = "blur(3px)";
       document.getElementById("mod3").style.filter = "blur(3px)";
@@ -178,7 +128,6 @@ function tallyHome() {
       document.getElementById("project7").style.transform = "rotate(55deg) scale(1)  skew(12deg, 67deg)";
       document.getElementById("project8").style.transform = "rotate(55deg) scale(1)  skew(-14deg, -63deg)";
       document.getElementById("project9").style.transform = "rotate(55deg) scale(1)  skew(-8deg, -60deg)";
-      document.getElementById("project10").style.transform = "rotate(55deg) scale(1)  skew(-11deg, -69deg)";
       document.getElementById("mod1").style.transform = "rotate(55deg) scale(1)  skew(-50deg, -12deg)";
       document.getElementById("mod2").style.transform = "rotate(55deg) scale(1)  skew(-10deg, -97deg)";
       document.getElementById("mod3").style.transform = "rotate(55deg) scale(1)  skew(-12deg, -107deg)";
@@ -203,7 +152,7 @@ function tallyHome() {
 function tally() {
   var x = 0;
   var y = 0;
-  for (i=0; i < 11; i++) {
+  for (i=0; i < 10; i++) {
     x = parseInt(localStorage.getItem("page"+i));
     if (isNaN(x)) {x = 0};
     console.log("page"+i+" "+x);
@@ -235,7 +184,7 @@ function tally() {
 function pageTally() {
   var x = 0;
   var y = 0;
-  for (i=0; i < 11; i++) {
+  for (i=0; i < 10; i++) {
     x = parseInt(localStorage.getItem("page"+i));
     if (isNaN(x)) {x = 0};
     console.log("page"+i+" "+x);
@@ -301,7 +250,7 @@ function gameWin() {
     y = 0;
     arr = [];
     chooser = 0;
-  for(i=0; i<11; i++) {
+  for(i=0; i<10; i++) {
     x = parseInt(localStorage.getItem("page"+i));
     if (isNaN(x)) {x=0};
     if (x==0) {
@@ -329,7 +278,7 @@ function gameLose() {
     var arr = [];
     var chooser = 0;
     var chosen = 0;
-    for(i=0; i<11; i++) {
+    for(i=0; i<10; i++) {
       x = parseInt(localStorage.getItem("page"+i));
       if (isNaN(x)) {x=0};
       if (x==1) {
@@ -366,7 +315,7 @@ function contactImageTally (projNum) {
 function contactTally() {
   var x = 0;
   var y = 0;
-  for (i=0; i < 11; i++) {
+  for (i=0; i < 10; i++) {
     x = parseInt(localStorage.getItem("page"+i));
     if (isNaN(x)) {x = 0};
     console.log("page"+i+" "+x);
