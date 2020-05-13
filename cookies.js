@@ -69,7 +69,6 @@ function tallyHome() {
       document.getElementById("game1").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
       document.getElementById("game2").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
       document.getElementById("game3").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
-      document.getElementById("game4").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
       document.getElementById("project0").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
       document.getElementById("project1").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
       document.getElementById("project2").style.filter = "invert(1) drop-shadow(0px 0px 20px red) contrast(50000%) saturate(50000%)";
@@ -94,7 +93,6 @@ function tallyHome() {
       document.getElementById("game1").style.filter = "blur(3px)";
       document.getElementById("game2").style.filter = "blur(3px)";
       document.getElementById("game3").style.filter = "blur(3px)";
-      document.getElementById("game4").style.filter = "blur(3px)";
       document.getElementById("project0").style.filter = "blur(3px)";
       document.getElementById("project1").style.filter = "blur(3px)";
       document.getElementById("project2").style.filter = "blur(3px)";
@@ -117,7 +115,6 @@ function tallyHome() {
       document.getElementById("game1").style.transform = "rotate(55deg) skew(-12deg, -67deg)";
       document.getElementById("game2").style.transform = "rotate(55deg) scale(1)  skew(-12deg, -67deg)";
       document.getElementById("game3").style.transform = "rotate(55deg) scale(1)  skew(-12deg, -97deg)";
-      document.getElementById("game4").style.transform = "rotate(55deg) scale(1)  skew(-12deg, -67deg)";
       document.getElementById("project0").style.transform = "rotate(55deg) scale(1)  skew(-20deg, -67deg)";
       document.getElementById("project1").style.transform = "rotate(55deg) scale(1)  skew(-30deg, -67deg)";
       document.getElementById("project2").style.transform = "rotate(55deg) scale(1)  skew(40deg, -167deg)";
