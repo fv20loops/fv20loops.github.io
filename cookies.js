@@ -6,7 +6,7 @@
 function tallyHome() {
   var x = 0;
   var y = 0;
-  for (i=0; i <11; i++) {
+  for (i=0; i <10; i++) {
     x = parseInt(localStorage.getItem("page"+i));
     if (isNaN(x)) {x = 0};
     console.log("page"+i+" "+x);
@@ -34,7 +34,7 @@ function tallyHome() {
      parentDiv.insertBefore(newDiv, currentDiv);
   };
 
-  if (y==11) {
+  if (y==10) {
   console.log("winner!")
   document.getElementById("winnerStrap").innerHTML = "winnnnnnnner text!"
   var z = parseInt(localStorage.getItem("winner"));
