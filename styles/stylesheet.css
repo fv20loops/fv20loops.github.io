@@ -19,12 +19,27 @@ body {
 h1{
   font-family: MonumentExtendedRegular;
   font-size: 40px;
-  position: absolute;
-  left:10%;
-  top:25%;
+  position: relative;
   color: #737373;
   z-index:0;
 }
+
+h2{
+  font-family: MonumentExtendedRegular;
+  font-size: 20px;
+  position: relative;
+  color: #737373;
+  z-index:0;
+}
+
+h3{
+  font-family: MonumentExtendedRegular;
+  font-size: 10px;
+  position: relative;
+  color: black;
+  z-index:0;
+}
+
 
 p3{
   font-family: MonumentExtendedRegular;
@@ -173,7 +188,7 @@ a:hover {
   width: 100%;
   text-align: center;
   background-color:white;
-  z-index:0;
+  z-index:1;
 }
 
 .contactGrid {
@@ -206,7 +221,7 @@ a:hover {
 .project-below{
   position: relative;
   text-align: center;
-  top: 1000px;
+  top: 1200px;
   left: 10%;
   width: 80%;
 }
@@ -217,4 +232,10 @@ a:hover {
   top: 1000px;
   width: 50%;
   left:25%;
+}
+
+.projectTitle{
+  position: absolute;
+  left:10%;
+  top:25%;
 }
