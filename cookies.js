@@ -2,6 +2,20 @@
 //project pages are pages 0-10
 //mod pages are 11-14
 
+function modalPop() {
+  var x = parseInt(localStorage.getItem('mobilePopup'));
+  console.log(x);
+  if (isNaN(x)) {x = 0};
+  if (x == 0) {
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+  modal.style.display = "block";
+  span.onclick = function() {
+  modal.style.display = "none";
+  localStorage.setItem('mobilePopup', 1);
+  };
+};
+}
 
 function tallyHome() {
   var x = 0;
@@ -36,7 +50,7 @@ function tallyHome() {
 
   if (y==10) {
   console.log("winner!")
-  document.getElementById("winnerStrap").innerHTML = "winnnnnnnner text!"
+  document.getElementById("winnerStrap").innerHTML = "winner!"
   var z = parseInt(localStorage.getItem("winner"));
   var href = document.createElement("a");
   href.style= "font-size: 20px;"

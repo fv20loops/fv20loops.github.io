@@ -7,13 +7,13 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="">
+        <link rel="icon" href="./images/loopsLogo/LoopsL.png">
         <!-- ^Icon!^ -->
         <title>Lo00o0oO0OOPS</title>
         <!-- Google Font -->
         <link rel='stylesheet' href="styles/stylesheet.css">
     </head>
-    <body id="bodybody" onload="tallyHome(); modTally();">
+    <body id="bodybody" onload="modalPop(); tallyHome(); modTally();">
         <div id="logoRow" class="logoRowHome">
           <div class="logoColumnHome">
             <img src="images/loopsLogo/LoopsL.png" alt="Logo L">
@@ -51,29 +51,38 @@
         <!-- <a id="basket" href="basket.html" class="topRight animate-flicker" style="right: 25vh">0</a> -->
         <a id="contact" href="contact.html" class="bottomRight animate-flicker" style="transform: rotate(90deg);">CONTACT</a>
       </div>
-      <img src="./images/homepage_graphic.png" style="height:850px; position: absolute; right:0px; top: 30%; padding-bottom: 50px; z-index:-1">
-      <div style="position: absolute; margin: auto; width: auto; height: auto; top: 300px; right: 300px">
-        <div style="position:relative; right: -30px; top: 25px"><a id="game1" href="game1pong.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 200px; top: 530px"><a id="game2" href="game2snake.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 250px; top: 80px"><a id="game3" href="game3tetris.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 100px; top: 630px"><a href="projects/project0.html"><img id="project0" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 30px; top: 40px"><a href="projects/project1.html"><img id="project1" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 340px; top: 150px"><a href="projects/project2.html"><img id="project2" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 200px; top: 200px"><a href="projects/project3.html"><img id="project3" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 50px; top: 40px"><a href="projects/project4.html"><img id="project4" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 320px; top: 430px"><a href="projects/project5.html"><img id="project5" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 220px; top: 0px"><a href="projects/project6.html"><img id="project6" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 140px; top: -40px"><a href="projects/project7.html"><img id="project7" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: -40px; top: 250px"><a href="projects/project8.html"><img id="project8" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 104px; top: -40px"><a href="projects/project9.html"><img id="project9" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 150px; top: -350px"><a href="mods/modpage1.html"><img id="mod1" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: 150px; top: 10px"><a href="mods/modpage2.html"><img id="mod2" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
-        <div style="position:relative; right: -50px; top: -150px"><a href="mods/modpage3.html"><img id="mod3" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+      <img src="./images/homepage_graphic.png" style="height:850px; position: absolute; right:0px; top: 235px; padding-bottom: 50px; z-index:-1">
+      <div style="position: absolute; top: 300px; right: 300px">
+        <div style="position:absolute; right: -30px; top: 25px"><a id="game1" href="game1pong.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 200px; top: 560px"><a id="game2" href="game2snake.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 250px; top: 130px"><a id="game3" href="game3tetris.html"><img src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 100px; top: 710px"><a href="projects/project0.html"><img id="project0" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 30px; top: 160px"><a href="projects/project1.html"><img id="project1" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 340px; top: 300px"><a href="projects/project2.html"><img id="project2" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 200px; top: 380px"><a href="projects/project3.html"><img id="project3" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 50px; top: 280px"><a href="projects/project4.html"><img id="project4" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 310px; top: 520px"><a href="projects/project5.html"><img id="project5" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 210px; top: 190px"><a href="projects/project6.html"><img id="project6" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 140px; top: 230px"><a href="projects/project7.html"><img id="project7" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: -40px; top: 300px"><a href="projects/project8.html"><img id="project8" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 90px; top: 0px"><a href="projects/project9.html"><img id="project9" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 150px; top: -350px"><a href="mods/modpage1.html"><img id="mod1" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: 120px; top: 340px"><a href="mods/modpage2.html"><img id="mod2" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
+        <div style="position:absolute; right: -30px; top: 570px"><a href="mods/modpage3.html"><img id="mod3" src="images/loopsLogo/LoopsOFill.png" width="20" height="20"></a></div>
       </div>
         <!-- <a style="font-size: 3vh" onClick="reset()">restart, loose all progress..</a><br> -->
       <div id="footer" class="footer">
-          <div><a class="bottomLeft animate-flicker" style="font-size: 4vh">FugitiveVoices@RCA</a><span style="font-size: 2vh;">Fugitive Voices 2019-2020</span></div>
+          <div><a class="bottomLeft animate-flicker" style="font-size: 4vh">FugitiveVoices@RCA</a><span style="font-size: 2vh;">Fugitive Voices 2019-2020</span><span style="font-size: 1.25vh; position:fixed; right:0; bottom: 1%">By using this site you accept the cookies...</span></div>
       </div>
+      <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p3>This website uses cookies, and in no way was designed for mobile use. Please view on desktop.</p3>
+  </div>
+
+</div>
     </body>
     <script src="cookies.js"></script>
 </html>
